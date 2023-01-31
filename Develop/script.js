@@ -73,18 +73,30 @@ var alphaUpper = [
   "Z",
 ];
 // Variable Declaration
-var confirmLength = "";
-var confirmSpecialCharacter;
-var confirmNumericCharacter;
-var confirmUpperCase;
-var confirmLowerCase;
+var confLength = "";
+var confSpeChar;
+var confNumChar;
+var confUpperCase;
+var confLowerCase;
 
 //main function
 function generatePassword() {
   var confirmLength = prompt(
     "How long would you like your password(8-128)?"
   );
-
+    //how many kind of parameters user wants
+  var confSpeChar = confirm(
+    "Click OK to confirm if you would like to include special characters"
+  );
+  var confNumChar = confirm(
+    "Click OK to confirm if you would like to include numeric characters"
+  );
+  var confUpperCase = confirm(
+    "Click OK to confirm if you would like to include uppercase characters"
+  );
+  var confLowerCase = confirm(
+    "Click OK to confirm if you would like to include lowercase characters"
+  );
  
 
 
