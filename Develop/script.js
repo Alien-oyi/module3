@@ -72,6 +72,20 @@ var alphaUpper = [
   "Y",
   "Z",
 ];
+// Variable Declaration
+var confirmLength = "";
+var confirmSpecialCharacter;
+var confirmNumericCharacter;
+var confirmUpperCase;
+var confirmLowerCase;
+
+//main function
+function generatePassword() {
+  var confirmLength = prompt(
+    "How long would you like your password(8-128)?"
+  );
+
+ 
 
 
 // Get references to the #generate element
