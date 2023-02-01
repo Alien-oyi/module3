@@ -1,5 +1,5 @@
 // Assignment code here
-// First to do list all the array we may use
+// First thing to do,list all the array we may use
 var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialChar = [
   "!",
@@ -81,7 +81,7 @@ var confLowerCase;
 
 //main function
 function generatePassword() {
-  var confirmLength = prompt(
+  var confLength = prompt(
     "How long would you like your password(8-128)?"
   );
     //how many kind of parameters user wants
@@ -99,7 +99,7 @@ function generatePassword() {
   );
   // Loop if user didnt pick any parameters
   while (
-    confSpeCha === false &&
+    confSpeChar === false &&
     confNumChar === false &&
     confUpperCase === false &&
     confLowerCase === false
@@ -120,17 +120,25 @@ function generatePassword() {
   // adding all parameters in one array
   var passwordChar = [];
   if (confSpeChar) {
-    passwordchar = passwordChar.concat(confSpeChar)
+    passwordchar = passwordChar.concat(specialChar)
   }
   if (confNumChar) {
-    passwordchar = passwordChar.concat(confNumChar)
+    passwordchar = passwordChar.concat(number)
   }
   if (confUpperCase) {
-    passwordchar = passwordChar.concat(confUpperCase)
+    passwordchar = passwordChar.concat(alphaUpper)
   }
   if (confLowerCase) {
-    passwordchar = passwordChar.concat(confLowerCase)
+    passwordchar = passwordChar.concat(alphaLower)
   }
+  // generate the randompassword from array
+  var randomPassword = "";
+
+  for (var i = 0; i < confLength; i++) {
+    randomPassword += passwordChar[Math.floor(Math.random() * passwordChar.length)];
+  }
+  return randomPassword;
+}
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 

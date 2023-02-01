@@ -9,3 +9,5 @@
 **add a while loop if user didnt pick anything**
 
 **concat all parameters as user wants in one array**
+
+**Math.floor(Math.random() * passwordCharacters.length) 
