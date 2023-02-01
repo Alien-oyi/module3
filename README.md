@@ -10,4 +10,4 @@
 
 **concat all parameters as user wants in one array**
 
-**Math.floor(Math.random() * passwordCharacters.length) 
+**add last part and fix all the bugs and typos**

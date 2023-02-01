@@ -73,7 +73,7 @@ var alphaUpper = [
   "Z",
 ];
 // Variable Declaration
-var confLength = "";
+var confLength ="";
 var confSpeChar;
 var confNumChar;
 var confUpperCase;
@@ -84,6 +84,12 @@ function generatePassword() {
   var confLength = prompt(
     "How long would you like your password(8-128)?"
   );
+  while (confLength<8 || confLength>128) {
+    alert("Password length must be between 8-128 characters Try again")
+    var confLength = prompt(
+     "How long would you like your password(8-128)?" 
+    );
+  }
     //how many kind of parameters user wants
   var confSpeChar = confirm(
     "Click OK to confirm if you would like to include special characters"
@@ -106,36 +112,40 @@ function generatePassword() {
   ) {
     alert("You have to choose at least one parameter");
     var confSpeChar = confirm(
-    "Click OK to confirm if you would like to include special characters"
-  );
-  var confNumChar = confirm(
-    "Click OK to confirm if you would like to include numeric characters"
-  );
-  var confUpperCase = confirm(
-    "Click OK to confirm if you would like to include uppercase characters"
-  );
-  var confLowerCase = confirm(
-    "Click OK to confirm if you would like to include lowercase characters"
-  );
+      "Click OK to confirm if you would like to include special characters"
+    );
+    var confNumChar = confirm(
+      "Click OK to confirm if you would like to include numeric characters"
+    );
+    var confUpperCase = confirm(
+      "Click OK to confirm if you would like to include uppercase characters"
+    );
+    var confLowerCase = confirm(
+      "Click OK to confirm if you would like to include lowercase characters"
+    );
+  }
   // adding all parameters in one array
-  var passwordChar = [];
+  var passwordchar = [];
+
   if (confSpeChar) {
-    passwordchar = passwordChar.concat(specialChar)
-  }
+    passwordchar = passwordchar.concat(specialChar)
+  };
   if (confNumChar) {
-    passwordchar = passwordChar.concat(number)
-  }
+    passwordchar = passwordchar.concat(number)
+  };
   if (confUpperCase) {
-    passwordchar = passwordChar.concat(alphaUpper)
-  }
+    passwordchar = passwordchar.concat(alphaUpper)
+  };
   if (confLowerCase) {
-    passwordchar = passwordChar.concat(alphaLower)
-  }
+    passwordchar = passwordchar.concat(alphaLower)
+  };
+
   // generate the randompassword from array
   var randomPassword = "";
 
   for (var i = 0; i < confLength; i++) {
-    randomPassword += passwordChar[Math.floor(Math.random() * passwordChar.length)];
+    randomPassword += passwordchar[Math.floor(Math.random() * passwordchar.length)];
+    console.log(randomPassword);
   }
   return randomPassword;
 }
