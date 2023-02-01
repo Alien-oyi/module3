@@ -117,9 +117,20 @@ function generatePassword() {
   var confLowerCase = confirm(
     "Click OK to confirm if you would like to include lowercase characters"
   );
- 
-
-
+  // adding all parameters in one array
+  var passwordChar = [];
+  if (confSpeChar) {
+    passwordchar = passwordChar.concat(confSpeChar)
+  }
+  if (confNumChar) {
+    passwordchar = passwordChar.concat(confNumChar)
+  }
+  if (confUpperCase) {
+    passwordchar = passwordChar.concat(confUpperCase)
+  }
+  if (confLowerCase) {
+    passwordchar = passwordChar.concat(confLowerCase)
+  }
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 

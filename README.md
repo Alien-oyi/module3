@@ -7,3 +7,5 @@
 **get the information from user**
 
 **add a while loop if user didnt pick anything**
+
+**concat all parameters as user wants in one array**
