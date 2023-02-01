@@ -105,6 +105,18 @@ function generatePassword() {
     confLowerCase === false
   ) {
     alert("You have to choose at least one parameter");
+    var confSpeChar = confirm(
+    "Click OK to confirm if you would like to include special characters"
+  );
+  var confNumChar = confirm(
+    "Click OK to confirm if you would like to include numeric characters"
+  );
+  var confUpperCase = confirm(
+    "Click OK to confirm if you would like to include uppercase characters"
+  );
+  var confLowerCase = confirm(
+    "Click OK to confirm if you would like to include lowercase characters"
+  );
  
 
 
