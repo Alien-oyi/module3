@@ -97,6 +97,14 @@ function generatePassword() {
   var confLowerCase = confirm(
     "Click OK to confirm if you would like to include lowercase characters"
   );
+  // Loop if user didnt pick any parameters
+  while (
+    confSpeCha === false &&
+    confNumChar === false &&
+    confUpperCase === false &&
+    confLowerCase === false
+  ) {
+    alert("You have to choose at least one parameter");
  
 
 
